@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/intelligibleWM">
+        <file>icons/IntelligibleWM.ico</file>
+    </qresource>
+</RCC>

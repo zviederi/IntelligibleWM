@@ -1,0 +1,33 @@
+# Automatically generate code for Qt moc, uic and rcc files
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
+
+set(PROJECT_SRC
+    gui/GuiRegistry.cpp
+    gui/resources/gui.qrc
+
+    IntelligibleWM.cpp
+    main.cpp
+)
+
+add_executable(${PROJECT_CODE_NAME} ${PROJECT_SRC})
+
+target_link_libraries(${PROJECT_CODE_NAME}
+    PRIVATE
+        Qt5::Widgets) 
+
+target_include_directories(${PROJECT_CODE_NAME} 
+    PRIVATE
+        ${CMAKE_HOME_DIRECTORY}/src)
+        
+target_compile_definitions(${PROJECT_CODE_NAME} 
+    PRIVATE
+        PROJECT_FULL_NAME="${PROJECT_FULL_NAME}"
+        PROJECT_VERSION="${PROJECT_VERSION_MAIN}"
+        PROJECT_NAME_VERSION="${PROJECT_FULL_NAME} ${PROJECT_VERSION_MAIN}")   
+
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup")
+     
+# Install
+include(InstallDependencies)        
