@@ -4,14 +4,14 @@
 #include <QIcon>
 #include <QStyle>
 
-namespace IntelligibleWM {
+namespace IntelligibleWM
+{
 
-     /**
-     * @brief GuiRegistry is a singleton
-     */
+    /**
+         * @brief GuiRegistry is a singleton
+         */
     GuiRegistry::GuiRegistry()
     {
-
     }
 
     const QIcon &GuiRegistry::intelligibleWMIcon() const
@@ -19,4 +19,4 @@ namespace IntelligibleWM {
         static const QIcon icon = QIcon(":/intelligibleWM/icons/IntelligibleWM.ico");
         return icon;
     }
-}
+} // namespace IntelligibleWM

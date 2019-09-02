@@ -4,13 +4,15 @@
 #include <QBrush>
 #include <QIcon>
 
-namespace IntelligibleWM {
+namespace IntelligibleWM
+{
 
-    class GuiRegistry {
-        public:
+    class GuiRegistry
+    {
+    public:
         /**
-         * @brief Returns single instance of GuiRegistry
-         */
+             * @brief Returns single instance of GuiRegistry
+             */
         static GuiRegistry &instance()
         {
             static GuiRegistry _instance;
@@ -19,8 +21,8 @@ namespace IntelligibleWM {
 
         const QIcon &intelligibleWMIcon() const;
 
-        private:
-            GuiRegistry();        
+    private:
+        GuiRegistry();
     };
 
-}
+} // namespace IntelligibleWM

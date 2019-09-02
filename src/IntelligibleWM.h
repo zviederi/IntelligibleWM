@@ -1,12 +1,23 @@
+#pragma once
+
 #include <QMainWindow>
 #include <QLabel>
 
-namespace IntelligibleWM {
+#include "gui/IntelligibleTabWidget.h"
 
-    class IntelligibleWM : public QMainWindow {
+namespace IntelligibleWM
+{
+
+    class IntelligibleTabWidget;
+
+    class IntelligibleWM : public QMainWindow
+    {
         Q_OBJECT
     public:
         IntelligibleWM(QWidget *parent = nullptr);
+
+    private:
+        IntelligibleTabWidget *_intelligibleTabWidget;    
     };
 
-}
+} // namespace IntelligibleWM

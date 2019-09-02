@@ -22,7 +22,6 @@ int main(int argc, char *argv[])
     int height = screenGeometry.height() - verticalMargin;
     intelligibleWM.resize(QSize(width, height));
 
-
     /**
      * @brief move to center main window.
      */
@@ -34,6 +33,6 @@ int main(int argc, char *argv[])
      * @brief show IntelligibleWM.
      */
     intelligibleWM.show();
-    
+
     return a.exec();
 }

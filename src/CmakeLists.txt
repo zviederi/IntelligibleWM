@@ -4,6 +4,9 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 set(PROJECT_SRC
+    gui/widgets/IntelligibleTabBar.cpp
+
+    gui/IntelligibleTabWidget.cpp
     gui/GuiRegistry.cpp
     gui/resources/gui.qrc
 
