@@ -4,6 +4,9 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 set(PROJECT_SRC
+
+    gui/dialogs/AboutIntelligibleWM.cpp
+
     gui/widgets/IntelligibleTabBar.cpp
 
     gui/IntelligibleTabWidget.cpp
@@ -30,7 +33,7 @@ target_compile_definitions(${PROJECT_CODE_NAME}
         PROJECT_VERSION="${PROJECT_VERSION_MAIN}"
         PROJECT_NAME_VERSION="${PROJECT_FULL_NAME} ${PROJECT_VERSION_MAIN}")   
 
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup")
+# set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup")
      
 # Install
 include(InstallDependencies)        

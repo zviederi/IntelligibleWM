@@ -15,6 +15,7 @@ namespace IntelligibleWM
         setMovable(true);
         setDocumentMode(true);
         intelligibleTabBar->setIconSize(QSize(20,20));
+        
     }
 
     void IntelligibleTabWidget::closeTab(int index)

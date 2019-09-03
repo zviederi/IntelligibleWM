@@ -17,7 +17,10 @@ namespace IntelligibleWM
         IntelligibleWM(QWidget *parent = nullptr);
 
     private:
-        IntelligibleTabWidget *_intelligibleTabWidget;    
+        IntelligibleTabWidget *_intelligibleTabWidget;
+
+    public Q_SLOTS:
+        void aboutIntelligibleWM();
     };
 
 } // namespace IntelligibleWM
