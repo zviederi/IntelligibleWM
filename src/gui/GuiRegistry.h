@@ -20,6 +20,7 @@ namespace IntelligibleWM
         }
 
         const QIcon &intelligibleWMIcon() const;
+        const QIcon &refresh() const;
 
     private:
         GuiRegistry();

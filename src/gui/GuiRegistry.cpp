@@ -19,4 +19,10 @@ namespace IntelligibleWM
         static const QIcon icon = QIcon(":/intelligibleWM/icons/IntelligibleWM.ico");
         return icon;
     }
+
+    const QIcon &GuiRegistry::refresh() const
+    {
+        static const QIcon icon = QIcon(":/intelligibleWM/icons/Refresh.ico");
+        return icon;
+    }
 } // namespace IntelligibleWM

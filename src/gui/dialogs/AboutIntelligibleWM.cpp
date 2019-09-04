@@ -22,7 +22,7 @@ namespace IntelligibleWM
         QString description = QString("<h3>" + version + "</h3>"
                                                         "Intelligible Warehouse Manager"
                                                         "<br/>"
-                                                        "The roject name " +
+                                                        "The project name " +
                                     version + " </a>"
                                                 "<br/>");
 

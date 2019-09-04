@@ -1,6 +1,9 @@
 #include "IntelligibleWM.h"
+
 #include "gui/GuiRegistry.h"
 #include "gui/dialogs/AboutIntelligibleWM.h"
+
+#include "core/utils/utils.h"
 
 #include <QApplication>
 #include <QWidgetAction>
@@ -12,17 +15,17 @@ namespace IntelligibleWM
 {
 
     IntelligibleWM::IntelligibleWM(QWidget *parent) : QMainWindow(parent),
-    _intelligibleTabWidget(nullptr)
+        _intelligibleTabWidget(nullptr)
     {
         /**
-             * @brief QCoreApplication::setApplicationName set application name - Intelligible WM
-             */
+         * @brief Set application name - Intelligible WM
+         */
         QCoreApplication::setApplicationName(PROJECT_NAME_VERSION);
         setWindowTitle(PROJECT_NAME_VERSION);
         setWindowIcon(GuiRegistry::instance().intelligibleWMIcon());
 
         QAction *aboutIntelligibleWMAction = new QAction("&IntelligibleWM", this);
-        connect(aboutIntelligibleWMAction, SIGNAL(triggered()), this, SLOT(aboutIntelligibleWM()));
+        VERIFY(connect(aboutIntelligibleWMAction, SIGNAL(triggered()), this, SLOT(aboutIntelligibleWM())));
 
         /* About info menu */
         QMenu *helpMenu = menuBar()->addMenu("Help");
@@ -36,8 +39,9 @@ namespace IntelligibleWM
         hlayout->setContentsMargins(0, 3, 0, 0);
         hlayout->addWidget(_intelligibleTabWidget);
         QWidget *window = new QWidget;
-        window->setLayout(hlayout);
         window->setWindowTitle("TEST");
+        window->setLayout(hlayout);
+        
         setCentralWidget(window);
 
         // statusBar()->setStyleSheet("QStatusBar::item { border: 0px solid black; }");

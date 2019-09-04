@@ -1,4 +1,5 @@
 #include "IntelligibleWM.h"
+
 #include <iostream>
 #include <QApplication>
 #include <QDesktopWidget>

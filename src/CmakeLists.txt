@@ -8,9 +8,11 @@ set(PROJECT_SRC
     gui/dialogs/AboutIntelligibleWM.cpp
 
     gui/widgets/IntelligibleTabBar.cpp
+    gui/widgets/IntelligibleToolBar.cpp
 
-    gui/IntelligibleTabWidget.cpp
     gui/GuiRegistry.cpp
+    gui/IntelligibleTabWidget.cpp
+    gui/IntelligibleWidget.cpp
     gui/resources/gui.qrc
 
     IntelligibleWM.cpp

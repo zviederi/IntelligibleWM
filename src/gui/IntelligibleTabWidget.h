@@ -16,6 +16,9 @@ namespace IntelligibleWM
 
         void closeTab(int index);
 
+    private:
+        QWidget *_intelligibleWidget;    
+
     protected:
         /**
          * @brief Overrides QTabWidget::keyPressEvent()
