@@ -10,9 +10,9 @@ namespace IntelligibleWM
         _refresh(new QToolButton(this))
     {
         _refresh->setIcon(GuiRegistry::instance().refresh());
-        _refresh->setToolButtonStyle(Qt::ToolButtonIconOnly);
-        _refresh->setIconSize(QSize(45, 25));
-
+        _refresh->setToolButtonStyle(Qt::ToolButtonIconOnly);        
+        _refresh->setIconSize(QSize(45, 19));
+   
         QHBoxLayout *mainLayout = new QHBoxLayout();
         mainLayout->setContentsMargins(2, 2, 2, 0);
         mainLayout->setSpacing(2);
@@ -20,4 +20,4 @@ namespace IntelligibleWM
         setLayout(mainLayout);
     }
 
-} // namespace IntelligibleWM
+} // namespace IntelligibleWM 

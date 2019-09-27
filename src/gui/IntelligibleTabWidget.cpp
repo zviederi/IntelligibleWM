@@ -10,15 +10,17 @@ namespace IntelligibleWM
     IntelligibleTabWidget::IntelligibleTabWidget(QWidget *parent) : QTabWidget(parent)
     {
         IntelligibleTabBar *intelligibleTabBar = new IntelligibleTabBar(this);
-        setTabBar(intelligibleTabBar);
-        setTabsClosable(true);
         setElideMode(Qt::ElideRight);
+        setTabBar(intelligibleTabBar);
+        setTabsClosable(true);        
         setMovable(true);
         setDocumentMode(true);
         intelligibleTabBar->setIconSize(QSize(20, 20));
 
         _intelligibleWidget = new IntelligibleWidget(this);
-        addTab(_intelligibleWidget, QString(" Instance name "));
+        addTab(_intelligibleWidget, QString(" Instance name text Test 14343"));
+        _intelligibleWidgetSecond = new IntelligibleWidget(this);
+        addTab(_intelligibleWidgetSecond, QString(" Instance name text more and more 2"));
     }
 
     void IntelligibleTabWidget::closeTab(int index)

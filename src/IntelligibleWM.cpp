@@ -39,9 +39,7 @@ namespace IntelligibleWM
         hlayout->setContentsMargins(0, 3, 0, 0);
         hlayout->addWidget(_intelligibleTabWidget);
         QWidget *window = new QWidget;
-        window->setWindowTitle("TEST");
-        window->setLayout(hlayout);
-        
+        window->setLayout(hlayout);        
         setCentralWidget(window);
 
         // statusBar()->setStyleSheet("QStatusBar::item { border: 0px solid black; }");

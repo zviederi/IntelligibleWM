@@ -2,5 +2,7 @@
     <qresource prefix="/intelligibleWM">
         <file>icons/IntelligibleWM.ico</file>
         <file>icons/Refresh.ico</file>
+        <file>icons/cancel.png</file>
+        <file>stylesheets/custom.qss</file>
     </qresource>
 </RCC>

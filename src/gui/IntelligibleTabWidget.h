@@ -18,7 +18,7 @@ namespace IntelligibleWM
 
     private:
         QWidget *_intelligibleWidget;    
-
+        QWidget *_intelligibleWidgetSecond;    
     protected:
         /**
          * @brief Overrides QTabWidget::keyPressEvent()

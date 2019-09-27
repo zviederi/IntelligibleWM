@@ -17,6 +17,8 @@ namespace IntelligibleWM
 
     private:
         IntelligibleToolBar *const _toolBar;
+
+        QSplitter *const _horizontalSplitter;
         QSplitter *const _verticalSplitter;
     };
 
