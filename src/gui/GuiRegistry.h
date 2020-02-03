@@ -19,8 +19,13 @@ namespace IntelligibleWM
             return _instance;
         }
 
+        const QIcon &add() const;
+        const QIcon &cross() const;
+        const QIcon &databaseIcon() const;
         const QIcon &intelligibleWMIcon() const;
+        const QIcon &info() const;
         const QIcon &refresh() const;
+        const QIcon &newConnection() const;
 
     private:
         GuiRegistry();

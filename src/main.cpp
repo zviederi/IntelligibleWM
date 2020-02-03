@@ -29,6 +29,10 @@ int main(int argc, char *argv[])
     IntelligibleWM::IntelligibleWM intelligibleWM;
 
     QString customStylesheet = readTextFile(":/intelligibleWM/stylesheets/custom.qss");
+
+    /**
+     * Set custom style sheet
+     **/
     a.setStyleSheet(customStylesheet);
 
     /**
