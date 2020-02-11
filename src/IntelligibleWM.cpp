@@ -1,15 +1,22 @@
 #include "IntelligibleWM.h"
 
-#include "gui/GuiRegistry.h"
-#include "gui/dialogs/AboutIntelligibleWM.h"
-
-#include "core/utils/utils.h"
-
 #include <QApplication>
 #include <QWidgetAction>
 #include <QHBoxLayout>
 #include <QStatusBar>
 #include <QMenuBar>
+
+#include "IntelligibleWMRegistry.h"
+
+#include "gui/GuiRegistry.h"
+#include "gui/dialogs/AboutIntelligibleWM.h"
+#include "gui/dialogs/ConnectionIntelligibleWM.h"
+
+#include "core/settings/SettingsManager.h"
+#include "core/events/bus/EventBus.h"
+#include "core/utils/utils.h"
+
+
 
 namespace IntelligibleWM
 {
@@ -39,16 +46,25 @@ namespace IntelligibleWM
         hlayout->setContentsMargins(0, 3, 0, 0);
         hlayout->addWidget(_intelligibleTabWidget);
         QWidget *window = new QWidget;
-        window->setLayout(hlayout);        
+        window->setLayout(hlayout);
         setCentralWidget(window);
-
-        // statusBar()->setStyleSheet("QStatusBar::item { border: 0px solid black; }");
     }
 
     void IntelligibleWM::aboutIntelligibleWM()
     {
         AboutIntelligibleWM aboutIntelligibleWM(this);
         aboutIntelligibleWM.exec();
+    }
+
+    void IntelligibleWM::openConnectionDialog()
+    {
+        ConnectionIntelligibleWM dialog(IntelligibleWMRegistry::instance().settingsManager(), this);
+        int result = dialog.exec();
+
+        if (result == QDialog::Accepted) {
+            ConnectionSettings *selected = dialog.selectedConnection();
+         //   openServer(selected);
+        }
     }
 
 } // namespace IntelligibleWM

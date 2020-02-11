@@ -11,7 +11,6 @@ namespace IntelligibleWM
     {
          _toolBar->setVisible(true);
 
-
         _horizontalSplitter->setOrientation(Qt::Horizontal);
         _horizontalSplitter->setHandleWidth(1);
         _horizontalSplitter->setContentsMargins(0, 0, 0, 0);

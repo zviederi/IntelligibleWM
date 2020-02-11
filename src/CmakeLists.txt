@@ -5,16 +5,33 @@ set(CMAKE_AUTOUIC ON)
 
 set(PROJECT_SRC
 
+    core/events/Event.cpp
+    core/events/EventBusDispatcher.cpp
+    core/events/EventBusSubscriber.cpp
+    core/events/EventError.cpp
+    core/events/EventWrapper.cpp
+    
+    core/events/bus/EventBus.cpp
+
+    core/settings/ConnectionSettings.cpp
+    core/settings/SettingsManager.cpp
+
+    core/utils/Logger.cpp
+    core/utils/SingletonPattern.hpp
+
     gui/dialogs/AboutIntelligibleWM.cpp
+    gui/dialogs/ConnectionIntelligibleWM.cpp
+    gui/dialogs/EditConnectionIntelligibleWM.cpp
 
     gui/widgets/IntelligibleTabBar.cpp
     gui/widgets/IntelligibleToolBar.cpp
 
     gui/GuiRegistry.cpp
-    gui/IntelligibleTabWidget.cpp
+    gui/IntelligibleTabWidget.cpp    
     gui/IntelligibleWidget.cpp
     gui/resources/gui.qrc
 
+    IntelligibleWMRegistry.cpp
     IntelligibleWM.cpp
     main.cpp
 )
@@ -23,11 +40,15 @@ add_executable(${PROJECT_CODE_NAME} ${PROJECT_SRC})
 
 target_link_libraries(${PROJECT_CODE_NAME}
     PRIVATE
-        Qt5::Widgets) 
+        Qt5::Widgets
+        ${MONGO_DRIVERS_DIR}/mongo-c-driver/lib/mongoc-1.0.lib
+        ${MONGO_DRIVERS_DIR}/mongo-cxx-driver/lib/bsoncxx.lib
+        ${MONGO_DRIVERS_DIR}/mongo-cxx-driver/lib/mongocxx.lib) 
 
 target_include_directories(${PROJECT_CODE_NAME} 
     PRIVATE
-        ${CMAKE_HOME_DIRECTORY}/src)
+        ${CMAKE_HOME_DIRECTORY}/src
+        ${BOOST_ROOT})      
         
 target_compile_definitions(${PROJECT_CODE_NAME} 
     PRIVATE
@@ -38,4 +59,4 @@ target_compile_definitions(${PROJECT_CODE_NAME}
 # set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup")
      
 # Install
-include(InstallDependencies)        
+include(InstallDependencies)

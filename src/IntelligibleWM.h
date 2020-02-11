@@ -21,6 +21,9 @@ namespace IntelligibleWM
 
     public Q_SLOTS:
         void aboutIntelligibleWM();
+
+    private Q_SLOTS:
+        void openConnectionDialog();
     };
 
 } // namespace IntelligibleWM

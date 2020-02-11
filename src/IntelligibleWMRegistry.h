@@ -10,8 +10,8 @@ namespace IntelligibleWM
     class SettingsManager;
     typedef boost::scoped_ptr<SettingsManager> SettingsManagerScopedPtr;
 
-    class IntelligibleWMEventBus;
-    typedef boost::scoped_ptr<IntelligibleWMEventBus> IntelligibleWMEventBusScopedPtr;
+    class EventBus;
+    typedef boost::scoped_ptr<EventBus> EventBusScopedPtr;
 
 
     class IntelligibleWMRegistry : public Patterns::LazySingleton<IntelligibleWMRegistry>
@@ -24,7 +24,7 @@ namespace IntelligibleWM
         IntelligibleWMRegistry();
         ~IntelligibleWMRegistry();
 
-        const IntelligibleWMEventBusScopedPtr _intellBus;
+        const EventBusScopedPtr _intellBus;
         const SettingsManagerScopedPtr _settingsManager;
     };
 
