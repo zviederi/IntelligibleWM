@@ -2,7 +2,7 @@
 
 #include <QObject>
 
-namespace IntelligibleWM
+namespace IWM
 {
     class EventBusDispatcher;
     struct EventBusSubscriber
@@ -12,4 +12,4 @@ namespace IntelligibleWM
         QObject *const receiver;
         QObject *const sender;
     };
-} // namespace IntelligibleWM
+} // namespace IWM

@@ -9,7 +9,7 @@
 #include "gui/GuiRegistry.h"
 #include "gui/dialogs/EditConnectionIntelligibleWM.h"
 
-namespace IntelligibleWM
+namespace IWM
 {
     class ConnectionListWidgetItem;
     class SettingsManager;
@@ -102,4 +102,4 @@ namespace IntelligibleWM
         void dropEvent(QDropEvent *event);
     };
 
-} // namespace IntelligibleWM
+} // namespace IWM

@@ -11,7 +11,7 @@ class QSpinBox;
 class QCheckBox;
 QT_END_NAMESPACE
 
-namespace IntelligibleWM {
+namespace IWM {
 
     class ConnectionSettings;
 
@@ -67,4 +67,5 @@ namespace IntelligibleWM {
          */
         void toggleEchoMode();
     };
-}
+    
+} // namespace IWM

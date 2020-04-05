@@ -3,7 +3,7 @@
 #include <QFrame>
 #include <QToolButton>
 
-namespace IntelligibleWM
+namespace IWM
 {
     class IntelligibleToolBar : public QFrame
     {
@@ -16,4 +16,4 @@ namespace IntelligibleWM
         QToolButton *const _refresh;
     };
 
-} // namespace IntelligibleWM
+} // namespace IWM

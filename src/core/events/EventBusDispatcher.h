@@ -2,7 +2,7 @@
 
 #include <QObject>
 
-namespace IntelligibleWM
+namespace IWM
 {
     class EventBusDispatcher : public QObject
     {
@@ -13,4 +13,4 @@ namespace IntelligibleWM
     protected:
         virtual bool event(QEvent *qevent);
     };
-} // namespace IntelligibleWM
+} // namespace IWM

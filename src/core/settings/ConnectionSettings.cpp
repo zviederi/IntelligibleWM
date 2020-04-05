@@ -1,6 +1,6 @@
 #include "ConnectionSettings.h"
 
-namespace IntelligibleWM {
+namespace IWM {
 
     ConnectionSettings::ConnectionSettings() : QObject()
     { }
@@ -70,4 +70,4 @@ namespace IntelligibleWM {
         return mongo_url;
     }
 
-} // namespace IntelligibleWM
+} // namespace IWM

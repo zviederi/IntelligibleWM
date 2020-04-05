@@ -5,7 +5,7 @@
 
 #include "Event.h"
 
-namespace IntelligibleWM
+namespace IWM
 {
     class EventWrapper : public QEvent
     {
@@ -19,4 +19,4 @@ namespace IntelligibleWM
         const boost::scoped_ptr<Event> _event;
         const QList<QObject *> _receivers;
     };
-} // namespace IntelligibleWM
+} // namespace IWM

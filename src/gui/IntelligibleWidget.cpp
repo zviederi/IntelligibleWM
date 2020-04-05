@@ -2,7 +2,7 @@
 
 #include <QVBoxLayout>
 
-namespace IntelligibleWM
+namespace IWM
 {
     IntelligibleWidget::IntelligibleWidget(QWidget *parent) : QWidget(parent),
         _toolBar(new IntelligibleToolBar(this)),
@@ -36,4 +36,4 @@ namespace IntelligibleWM
         layout->addWidget(_verticalSplitter, 1);
         setLayout(layout);
     }
-} // namespace IntelligibleWM
+} // namespace IWM

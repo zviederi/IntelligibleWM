@@ -4,7 +4,7 @@
 #include <QIcon>
 #include <QStyle>
 
-namespace IntelligibleWM
+namespace IWM
 {
 
     /**
@@ -55,4 +55,4 @@ namespace IntelligibleWM
         static const QIcon icon = QIcon(":/intelligibleWM/icons/NewConnection.ico");
         return icon;
     }
-} // namespace IntelligibleWM
+} // namespace IWM

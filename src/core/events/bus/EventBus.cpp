@@ -11,16 +11,16 @@
 #include "../eventwrapper.h"
 #include "core/utils/utils.h"
 
-namespace IntelligibleWM {
+namespace IWM {
 
     template < typename R, typename A > using intelligble_function = std::function< R(A) > ;
 
     
-    struct RemoveIfReciver : public intelligble_function<const IntelligibleWM::EventBus::SubscribersType&, bool>
+    struct RemoveIfReciver : public intelligble_function<const IWM::EventBus::SubscribersType&, bool>
     {
         RemoveIfReciver(QObject *receiver) : _receiver(receiver) {}
 
-        bool operator()(const IntelligibleWM::EventBus::SubscribersType& item) const {
+        bool operator()(const IWM::EventBus::SubscribersType& item) const {
             if (item.second->receiver == _receiver) {
                 delete item.second;
                 return true;
@@ -31,10 +31,10 @@ namespace IntelligibleWM {
         QObject *_receiver;
     };
 
-    struct FindIfReciver : public intelligble_function<const IntelligibleWM::EventBus::SubscribersType&, bool>
+    struct FindIfReciver : public intelligble_function<const IWM::EventBus::SubscribersType&, bool>
     {
         FindIfReciver(QThread *thread) : _thread(thread) {}
-        bool operator()(const IntelligibleWM::EventBus::DispatchersType &item) const {
+        bool operator()(const IWM::EventBus::DispatchersType &item) const {
             if (item.first == _thread) {
                 return true;
             }

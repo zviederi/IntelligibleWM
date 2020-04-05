@@ -1,7 +1,7 @@
 #include "EventBusDispatcher.h"
 #include "EventWrapper.h"
 
-namespace IntelligibleWM
+namespace IWM
 {
     EventBusDispatcher::EventBusDispatcher(QObject *parent) : QObject(parent)
     { }
@@ -23,4 +23,4 @@ namespace IntelligibleWM
 
         return true;
     }
-} // namespace IntelligibleWM
+} // namespace IWM

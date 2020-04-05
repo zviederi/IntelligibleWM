@@ -4,7 +4,7 @@
 #include <QTabWidget>
 #include <QTabBar>
 
-namespace IntelligibleWM
+namespace IWM
 {
 
     class IntelligibleTabWidget : public QTabWidget
@@ -27,4 +27,4 @@ namespace IntelligibleWM
         virtual void keyPressEvent(QKeyEvent *event);
     };
 
-} // namespace IntelligibleWM
+} // namespace IWM

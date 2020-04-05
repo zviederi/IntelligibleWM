@@ -9,8 +9,7 @@
 #include <algorithm>
 #include <functional>
 
-
-namespace IntelligibleWM {
+namespace IWM {
     
     namespace stdutils
     {

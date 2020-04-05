@@ -4,7 +4,7 @@
 #include <QVariantMap>
 #include <vector>
 
-namespace IntelligibleWM {
+namespace IWM {
 
     class ConnectionSettings;
 
@@ -158,4 +158,4 @@ namespace IntelligibleWM {
 
     };
 
-} // namespace IntelligibleWM
+} // namespace IWM

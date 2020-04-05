@@ -7,7 +7,7 @@
 
 #include "EventError.h"
 
-namespace IntelligibleWM
+namespace IWM
 {
    class Event
     {
@@ -67,7 +67,7 @@ namespace IntelligibleWM
         const EventError _error;
     };
     
-} // namespace IntelligibleWM
+} // namespace IWM
 
 #define D_EVENT                           \
     public:                               \

@@ -7,7 +7,7 @@
 #include <iostream>
 #include <string>
 
-namespace IntelligibleWM {
+namespace IWM {
 
     class ConnectionSettings : public QObject
     {
@@ -97,4 +97,4 @@ namespace IntelligibleWM {
         bool _isDefaultConnection;
     };
 
-} // namespace IntelligibleWM
+} // namespace IWM

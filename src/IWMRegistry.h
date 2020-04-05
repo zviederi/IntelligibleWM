@@ -5,7 +5,7 @@
 #include <boost/scoped_ptr.hpp>
 #include <boost/shared_ptr.hpp>
 
-namespace IntelligibleWM
+namespace IWM
 {
     class SettingsManager;
     typedef boost::scoped_ptr<SettingsManager> SettingsManagerScopedPtr;
@@ -14,18 +14,18 @@ namespace IntelligibleWM
     typedef boost::scoped_ptr<EventBus> EventBusScopedPtr;
 
 
-    class IntelligibleWMRegistry : public Patterns::LazySingleton<IntelligibleWMRegistry>
+    class IWMRegistry : public Patterns::LazySingleton<IWMRegistry>
     {
-        friend class Patterns::LazySingleton<IntelligibleWMRegistry>;
+        friend class Patterns::LazySingleton<IWMRegistry>;
     public:
         SettingsManager * settingsManager() const { return _settingsManager.get(); }
 
     private:
-        IntelligibleWMRegistry();
-        ~IntelligibleWMRegistry();
+        IWMRegistry();
+        ~IWMRegistry();
 
         const EventBusScopedPtr _intellBus;
         const SettingsManagerScopedPtr _settingsManager;
     };
 
-} // namespace IntelligibleWM
+} // namespace IWM

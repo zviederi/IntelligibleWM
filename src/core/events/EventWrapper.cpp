@@ -1,6 +1,6 @@
 #include "EventWrapper.h"
 
-namespace IntelligibleWM
+namespace IWM
 {
     EventWrapper::EventWrapper(Event *event, QList<QObject *> receivers) : QEvent(event->type()),
         _event(event),
@@ -25,4 +25,4 @@ namespace IntelligibleWM
     {
         return _receivers;
     }
-} // namespace IntelligibleWM
+} // namespace IWM

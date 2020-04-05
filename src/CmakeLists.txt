@@ -31,7 +31,7 @@ set(PROJECT_SRC
     gui/IntelligibleWidget.cpp
     gui/resources/gui.qrc
 
-    IntelligibleWMRegistry.cpp
+    IWMRegistry.cpp
     IntelligibleWM.cpp
     main.cpp
 )

@@ -6,7 +6,7 @@
 #include <QStatusBar>
 #include <QMenuBar>
 
-#include "IntelligibleWMRegistry.h"
+#include "IWMRegistry.h"
 
 #include "gui/GuiRegistry.h"
 #include "gui/dialogs/AboutIntelligibleWM.h"
@@ -16,9 +16,7 @@
 #include "core/events/bus/EventBus.h"
 #include "core/utils/utils.h"
 
-
-
-namespace IntelligibleWM
+namespace IWM
 {
 
     IntelligibleWM::IntelligibleWM(QWidget *parent) : QMainWindow(parent),
@@ -33,6 +31,15 @@ namespace IntelligibleWM
 
         QAction *aboutIntelligibleWMAction = new QAction("&IntelligibleWM", this);
         VERIFY(connect(aboutIntelligibleWMAction, SIGNAL(triggered()), this, SLOT(aboutIntelligibleWM())));
+
+          /* Quit action */
+        QAction *quitAction = new QAction("&Quit", this);
+        quitAction->setShortcuts(QKeySequence::Quit);
+        VERIFY(connect(quitAction, SIGNAL(triggered()), this, SLOT(close())));
+
+        /* File menu */
+        QMenu *fileMenu = menuBar()->addMenu(tr("File"));
+        fileMenu->addAction(quitAction);
 
         /* About info menu */
         QMenu *helpMenu = menuBar()->addMenu("Help");
@@ -58,7 +65,7 @@ namespace IntelligibleWM
 
     void IntelligibleWM::openConnectionDialog()
     {
-        ConnectionIntelligibleWM dialog(IntelligibleWMRegistry::instance().settingsManager(), this);
+        ConnectionIntelligibleWM dialog(IWMRegistry::instance().settingsManager(), this);
         int result = dialog.exec();
 
         if (result == QDialog::Accepted) {
@@ -67,4 +74,4 @@ namespace IntelligibleWM
         }
     }
 
-} // namespace IntelligibleWM
+} // namespace IWM

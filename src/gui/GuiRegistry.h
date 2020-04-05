@@ -4,7 +4,7 @@
 #include <QBrush>
 #include <QIcon>
 
-namespace IntelligibleWM
+namespace IWM
 {
 
     class GuiRegistry
@@ -31,4 +31,4 @@ namespace IntelligibleWM
         GuiRegistry();
     };
 
-} // namespace IntelligibleWM
+} // namespace IWM

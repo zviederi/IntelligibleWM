@@ -14,7 +14,7 @@
 
 #include "gui/guiregistry.h"
 
-namespace IntelligibleWM {
+namespace IWM {
 
     EditConnectionIntelligibleWM::EditConnectionIntelligibleWM(ConnectionSettings *connectionSettings, QWidget *parent) : QDialog(parent),
         _connectionSettings(connectionSettings)
@@ -124,4 +124,4 @@ namespace IntelligibleWM {
         _userPassword->setEchoMode(isPassword ? QLineEdit::Normal: QLineEdit::Password);
         _echoModeButton->setText(isPassword ? "Hide": "Show");
     }
-}
+} // namespace IWM

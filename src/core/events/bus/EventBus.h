@@ -8,7 +8,7 @@
 #include <iostream>
 
 
-namespace IntelligibleWM
+namespace IWM
 {
     class Event;
     class EventWrapper;
@@ -68,4 +68,4 @@ namespace IntelligibleWM
 
     };  
 
-} // namespace IntelligibleWM
+} // namespace IWM

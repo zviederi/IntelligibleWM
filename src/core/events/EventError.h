@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace IntelligibleWM
+namespace IWM
 {
     class EventError
     {
@@ -40,4 +40,4 @@ namespace IntelligibleWM
         */
         const std::string _errorMessage;
     };
-} // namespace IntelligibleWM
+} // namespace IWM

@@ -8,7 +8,7 @@
 #include <QHeaderView>
 #include <QLabel>
 
-namespace IntelligibleWM
+namespace IWM
 {
     /**
      * @brief Simple ListWidgetItem that has several convenience methods.
@@ -255,4 +255,4 @@ namespace IntelligibleWM
         QTreeWidget::dropEvent(event);
         emit layoutChanged();
     }
-} // namespace IntelligibleWM
+} // namespace IWM

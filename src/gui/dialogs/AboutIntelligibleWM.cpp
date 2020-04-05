@@ -7,7 +7,7 @@
 
 #include "gui/GuiRegistry.h"
 
-namespace IntelligibleWM
+namespace IWM
 {
     AboutIntelligibleWM::AboutIntelligibleWM(QWidget *parent) : QDialog(parent)
     {
@@ -45,4 +45,4 @@ namespace IntelligibleWM
         layout->addWidget(copyRightLabel, 0, 1, 4, 4);
         layout->addWidget(buttonBox, 4, 0, 1, 5);
     }
-} // namespace IntelligibleWM
+} // namespace IWM

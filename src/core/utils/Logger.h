@@ -8,7 +8,7 @@
 #include "SingletonPattern.hpp"
 // #include <mongocxx/logger.hpp>
 
-namespace IntelligibleWM
+namespace IWM
 {
     class Logger: public QObject, public Patterns::LazySingleton<Logger>
     {
@@ -33,4 +33,4 @@ namespace IntelligibleWM
     // {
     //     return Logger::instance().print(mess, level, notify);
     // }
-} // namespace IntelligibleWM
+} // namespace IWM

@@ -2,7 +2,7 @@
 
 #include <QTabBar>
 
-namespace IntelligibleWM
+namespace IWM
 {
     class IntelligibleTabBar : public QTabBar
     {
@@ -21,4 +21,4 @@ namespace IntelligibleWM
         QString buildStyleSheet();
     };
 
-} // namespace IntelligibleWM
+} // namespace IWM

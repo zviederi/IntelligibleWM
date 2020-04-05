@@ -12,7 +12,7 @@
 #include "core/utils/Logger.h"
 #include "core/utils/utils.h"
 
-namespace IntelligibleWM {
+namespace IWM {
 
     /**
      * Creates SettingsManager for config file in default location
@@ -217,4 +217,4 @@ namespace IntelligibleWM {
         return map;
     }
 
-} // namespace IntelligibleWM
+} // namespace IWM

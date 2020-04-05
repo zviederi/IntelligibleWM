@@ -14,7 +14,7 @@ namespace
     }
 }
 
-namespace IntelligibleWM
+namespace IWM
 {
     Logger::Logger()
     {
@@ -89,4 +89,4 @@ namespace IntelligibleWM
     //           emit printed(mess, level);
     // }
 
-} // namespace IntelligibleWM
+} // namespace IWM

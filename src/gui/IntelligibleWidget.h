@@ -6,7 +6,7 @@
 
 #include "gui/widgets/IntelligibleToolBar.h"
 
-namespace IntelligibleWM
+namespace IWM
 {
     class IntelligibleWidget : public QWidget
     {
@@ -22,4 +22,4 @@ namespace IntelligibleWM
         QSplitter *const _verticalSplitter;
     };
 
-} // namespace IntelligibleWM
+} // namespace IWM

@@ -5,7 +5,7 @@
 #include "gui/widgets/IntelligibleTabBar.h"
 #include "gui/IntelligibleWidget.h"
 
-namespace IntelligibleWM
+namespace IWM
 {
     IntelligibleTabWidget::IntelligibleTabWidget(QWidget *parent) : QTabWidget(parent)
     {
@@ -40,4 +40,4 @@ namespace IntelligibleWM
             return;
         }
     }
-} // namespace IntelligibleWM
+} // namespace IWM

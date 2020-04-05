@@ -2,7 +2,7 @@
 
 #include <QDialog>
 
-namespace IntelligibleWM
+namespace IWM
 {
 
     class AboutIntelligibleWM : public QDialog
@@ -12,4 +12,4 @@ namespace IntelligibleWM
         explicit AboutIntelligibleWM(QWidget *parent);
     };
 
-} // namespace IntelligibleWM
+} // namespace IWM

@@ -1,9 +1,9 @@
 #include "IntelligibleTabBar.h"
 
-namespace IntelligibleWM
+namespace IWM
 {
     IntelligibleTabBar::IntelligibleTabBar(QWidget *parent) : QTabBar(parent)
     {
         setDrawBase(false);
     }
-} // namespace IntelligibleWM
+} // namespace IWM

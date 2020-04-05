@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     // Initialize Qt application
     QApplication a(argc, argv);
 
-    IntelligibleWM::IntelligibleWM intelligibleWM;
+    IWM::IntelligibleWM intelligibleWM;
 
     QString customStylesheet = readTextFile(":/intelligibleWM/stylesheets/custom.qss");
 

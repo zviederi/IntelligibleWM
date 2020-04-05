@@ -4,7 +4,7 @@
 
 #include "gui/GuiRegistry.h"
 
-namespace IntelligibleWM
+namespace IWM
 {
     IntelligibleToolBar::IntelligibleToolBar(QWidget *parent) : BaseClass(parent),
         _refresh(new QToolButton(this))
@@ -20,4 +20,4 @@ namespace IntelligibleWM
         setLayout(mainLayout);
     }
 
-} // namespace IntelligibleWM 
+} // namespace IWM 

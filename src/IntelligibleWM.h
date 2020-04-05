@@ -5,7 +5,7 @@
 
 #include "gui/IntelligibleTabWidget.h"
 
-namespace IntelligibleWM
+namespace IWM
 {
 
     class IntelligibleTabWidget;
@@ -26,4 +26,4 @@ namespace IntelligibleWM
         void openConnectionDialog();
     };
 
-} // namespace IntelligibleWM
+} // namespace IWM

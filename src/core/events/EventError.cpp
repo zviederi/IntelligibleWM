@@ -1,6 +1,6 @@
 #include "EventError.h"
 
-namespace IntelligibleWM
+namespace IWM
 {
     EventError::EventError()
     {  }
@@ -18,4 +18,4 @@ namespace IntelligibleWM
     {
         return _errorMessage;
     }
-} // namespace IntelligibleWM
+} // namespace IWM
