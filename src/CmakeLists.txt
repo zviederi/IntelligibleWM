@@ -19,6 +19,8 @@ set(PROJECT_SRC
     core/utils/Logger.cpp
     core/utils/SingletonPattern.hpp
 
+    core/workers/IwmMongo.cpp
+
     gui/dialogs/AboutIntelligibleWM.cpp
     gui/dialogs/ConnectionIntelligibleWM.cpp
     gui/dialogs/EditConnectionIntelligibleWM.cpp
@@ -48,7 +50,10 @@ target_link_libraries(${PROJECT_CODE_NAME}
 target_include_directories(${PROJECT_CODE_NAME} 
     PRIVATE
         ${CMAKE_HOME_DIRECTORY}/src
-        ${BOOST_ROOT})      
+        ${BOOST_ROOT}
+        ${MONGO_DRIVERS_DIR}/mongo-cxx-driver/include/bsoncxx/v_noabi
+        ${MONGO_DRIVERS_DIR}/mongo-cxx-driver/include/mongocxx/v_noabi)
+            
         
 target_compile_definitions(${PROJECT_CODE_NAME} 
     PRIVATE

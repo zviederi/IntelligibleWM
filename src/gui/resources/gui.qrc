@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/intelligibleWM">
+        <file>icons/Database.ico</file>  
         <file>icons/IntelligibleWM.ico</file>
         <file>icons/Refresh.ico</file>
         <file>icons/cancel.png</file>
