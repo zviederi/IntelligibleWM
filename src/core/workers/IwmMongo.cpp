@@ -18,6 +18,7 @@ namespace IWM {
         mongocxx::instance::current();
         const auto uri = mongocxx::uri{"mongodb://localhost:27017"};
         try {
+             std::cout << "Mongo Url: " << uri.to_string() << "\n";
             return new mongocxx::client{uri};
         } catch(const mongocxx::exception &ex) {
             std::cout << "connection failed: " << ex.what() << "\n";

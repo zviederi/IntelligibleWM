@@ -6,6 +6,8 @@
 
 #include "gui/widgets/IntelligibleToolBar.h"
 
+#include "core/workers/IwmMongo.h"
+
 namespace IWM
 {
     class IntelligibleWidget : public QWidget

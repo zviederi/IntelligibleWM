@@ -2,6 +2,10 @@
 
 #include <QVBoxLayout>
 
+#include <mongocxx/logger.hpp>
+#include <mongocxx/stdx.hpp>
+#include <mongocxx/database.hpp>
+
 namespace IWM
 {
     IntelligibleWidget::IntelligibleWidget(QWidget *parent) : QWidget(parent),
@@ -9,6 +13,7 @@ namespace IWM
         _horizontalSplitter(new QSplitter(this)),
         _verticalSplitter(new QSplitter(this))
     {
+        std::cout << "IntelligibleWidget" << "\n";
          _toolBar->setVisible(true);
 
         _horizontalSplitter->setOrientation(Qt::Horizontal);
@@ -35,5 +40,16 @@ namespace IWM
         layout->setSpacing(0);
         layout->addWidget(_verticalSplitter, 1);
         setLayout(layout);
+
+        // IwmMongo *test = new IwmMongo(this);
+        IwmMongo test;
+        mongocxx::client *conn  = test.connection();
+        auto db = conn->database("dellper");
+        auto collections = db.list_collections();
+       
+        for (auto&& collection : collections) {
+            std::cout << "Database: " <<  collection["name"].get_utf8().value.to_string() << "\n";
+        }
+                
     }
 } // namespace IWM

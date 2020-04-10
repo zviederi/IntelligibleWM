@@ -1,4 +1,4 @@
-# Intelligible Warehouse Manager
+# Intelligible Warehouse Management
 
 New warehouse manager software...! Work in progress...!
 

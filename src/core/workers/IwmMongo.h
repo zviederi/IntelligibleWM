@@ -15,11 +15,12 @@ namespace IWM {
         Q_OBJECT
     public:
         explicit IwmMongo(QObject *parent = nullptr);
+        mongocxx::client *connection();
 
     private:
         QThread *_thread;
 
-        mongocxx::client *connection();
+        
     };  
 
 }
