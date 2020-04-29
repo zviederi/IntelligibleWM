@@ -6,7 +6,7 @@
 #include <QStatusBar>
 #include <QMenuBar>
 
-#include "IWMRegistry.h"
+#include "Registry.h"
 
 #include "gui/GuiRegistry.h"
 #include "gui/dialogs/AboutIntelligibleWM.h"
@@ -29,8 +29,16 @@ namespace IWM
         setWindowTitle(PROJECT_NAME_VERSION);
         setWindowIcon(GuiRegistry::instance().intelligibleWMIcon());
 
+        QString controlKey = "Ctrl";
+
         QAction *aboutIntelligibleWMAction = new QAction("&IntelligibleWM", this);
         VERIFY(connect(aboutIntelligibleWMAction, SIGNAL(triggered()), this, SLOT(aboutIntelligibleWM())));
+
+        QAction *connectAction = new QAction(tr("New &Connection..."), this);
+        connectAction->setShortcuts(QKeySequence::New);
+        connectAction->setIconText(tr("New &Connection"));
+        connectAction->setToolTip(QString("Connect to warehouse. <b>(%1 + N)</b>").arg(controlKey));
+        VERIFY(connect(connectAction, SIGNAL(triggered()), this, SLOT(openConnectionDialog())));
 
           /* Quit action */
         QAction *quitAction = new QAction("&Quit", this);
@@ -39,6 +47,7 @@ namespace IWM
 
         /* File menu */
         QMenu *fileMenu = menuBar()->addMenu(tr("File"));
+        fileMenu->addAction(connectAction);
         fileMenu->addAction(quitAction);
 
         /* About info menu */
@@ -65,7 +74,7 @@ namespace IWM
 
     void IntelligibleWM::openConnectionDialog()
     {
-        ConnectionIntelligibleWM dialog(IWMRegistry::instance().settingsManager(), this);
+        ConnectionIntelligibleWM dialog(Registry::instance().settingsManager(), this);
         int result = dialog.exec();
 
         if (result == QDialog::Accepted) {

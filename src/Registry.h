@@ -13,19 +13,24 @@ namespace IWM
     class EventBus;
     typedef boost::scoped_ptr<EventBus> EventBusScopedPtr;
 
+    class IntelligibleApp;
+    typedef boost::scoped_ptr<IntelligibleApp> IntelligibleAppScopedPtr;
 
-    class IWMRegistry : public Patterns::LazySingleton<IWMRegistry>
+    class Registry : public Patterns::LazySingleton<Registry>
     {
-        friend class Patterns::LazySingleton<IWMRegistry>;
+        friend class Patterns::LazySingleton<Registry>;
     public:
+        EventBus * eventBus() const { return _bus.get(); }
         SettingsManager * settingsManager() const { return _settingsManager.get(); }
+        IntelligibleApp * intelligibleApp() const { return _intelligibleApp.get(); }
 
     private:
-        IWMRegistry();
-        ~IWMRegistry();
+        Registry();
+        ~Registry();
 
-        const EventBusScopedPtr _intellBus;
+        const EventBusScopedPtr _bus;
         const SettingsManagerScopedPtr _settingsManager;
+        const IntelligibleAppScopedPtr _intelligibleApp;
     };
 
 } // namespace IWM

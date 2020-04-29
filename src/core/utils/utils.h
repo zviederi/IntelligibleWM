@@ -10,6 +10,13 @@
 #include <functional>
 
 namespace IWM {
+
+    template <typename ArgumentType, typename ResultType>
+    struct unary_function
+    {
+        using argument_type = ArgumentType;
+        using result_type = ResultType;
+    };
     
     namespace stdutils
     {
@@ -21,7 +28,7 @@ namespace IWM {
         }
 
         template<typename T>
-        struct RemoveIfFound : public std::unary_function<T, bool>
+        struct RemoveIfFound : public unary_function<T, bool>
         {
             RemoveIfFound(T whatSearch) : _whatSearch(whatSearch) {}
 
@@ -37,8 +44,7 @@ namespace IWM {
         };
 
         template <typename T>
-        struct default_delete
-                : public std::unary_function <T, void>
+        struct default_delete : public unary_function <T, void>
         {
             inline void operator ()(T *ptr) const
             {
@@ -47,8 +53,7 @@ namespace IWM {
         };
 
         template <typename T>
-        struct default_delete<T*>
-                : public std::unary_function<T*, void>
+        struct default_delete<T*> : public unary_function<T*, void>
         {
             inline void operator ()(T *ptr) const
             {
@@ -58,7 +63,7 @@ namespace IWM {
 
         template<typename T, unsigned int N>
         struct default_delete<T[N]>
-                :public std::unary_function<const T[N], void>
+                :public unary_function<const T[N], void>
         {
             inline void operator ()(const T ptr) const
             {
@@ -67,5 +72,5 @@ namespace IWM {
         };
 
     };
-
+    
 }

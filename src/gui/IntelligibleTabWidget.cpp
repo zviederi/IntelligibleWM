@@ -20,8 +20,6 @@ namespace IWM
 
         _intelligibleWidget = new IntelligibleWidget(this);
         addTab(_intelligibleWidget, GuiRegistry::instance().databaseIcon(),  QString(" IWM TAB 01 "));
-        _intelligibleWidgetSecond = new IntelligibleWidget(this);
-        addTab(_intelligibleWidgetSecond, GuiRegistry::instance().databaseIcon(), QString("IWM TAB 02"));
     }
 
     void IntelligibleTabWidget::closeTab(int index)
